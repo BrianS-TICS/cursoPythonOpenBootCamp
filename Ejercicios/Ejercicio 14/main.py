@@ -4,11 +4,12 @@ import sys
 
 window = tk.Tk()
 
-def ClickToRestart() :
+def ClickToRestart(self) :
     selected.set(None) 
     
-def seleccionar(self) :
-    print()
+def seleccionar() :
+    print(selected.get())
+    pass
 
 selected = tk.StringVar()
 r1 = ttk.Radiobutton(window, text="Camisa simple", value="Camisa simple", variable=selected, command=seleccionar)
@@ -21,7 +22,7 @@ r3 = ttk.Radiobutton(window, text="Traje", value="Traje", variable=selected, com
 r3.pack()
 
 btnRestart = ttk.Button(window, text="Reiniciar")
-btnRestart.bind('<Button-1>', ClickToRestart)
+btnRestart.bind('<Button>', ClickToRestart)
 btnRestart.pack()
 
 window.mainloop()
