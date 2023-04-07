@@ -10,6 +10,11 @@
 
 <body>
     <h1>Directores</h1>
+    <ul>
+        {% for objeto in directores %}
+        <li> <a href="/cine/peliculas/{{objeto.id|add:0}}">{{ objeto.nombre }}</a></li>
+        {% endfor %}
+    </ul>
 </body>
 
 </html>
